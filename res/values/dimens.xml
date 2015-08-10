@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_layout_sides">120dp</dimen>
+    <dimen name="margin_layout_top">20dp</dimen>
+    <dimen name="margin_button_sides">50dp</dimen>
+    <dimen name="margin_arrow_sides">20dp</dimen>
+    <dimen name="margin_text_sides">30dp</dimen>
+    <dimen name="margin_pitt_side">30dp</dimen>
+    <dimen name="margin_pitt_bottom">10dp</dimen>
+    <dimen name="image_pitt_size">100dp</dimen>
+    <dimen name="follow_text_size">40dp</dimen>
+    <dimen name="follow_icon_size">60dp</dimen>
+    <dimen name="follow_icon_margin">8dp</dimen>
+    <dimen name="follow_button_back_text_size">20sp</dimen>
+    <dimen name="follow_button_back_margin">20sp</dimen>
+</resources>
