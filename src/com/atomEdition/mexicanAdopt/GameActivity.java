@@ -230,12 +230,12 @@ public class GameActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game);
         try {
             setAd();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        setContentView(R.layout.game);
         initialization();
 
     }

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="game_button_size">70dp</dimen>
+    <dimen name="game_button_top_margin_from_bottom">85dp</dimen>
+    <dimen name="arrow_top_margin_from_bottom">135dp</dimen>
     <dimen name="margin_layout_sides">120dp</dimen>
     <dimen name="margin_layout_top">20dp</dimen>
     <dimen name="margin_button_sides">50dp</dimen>
