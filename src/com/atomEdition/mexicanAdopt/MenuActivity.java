@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.atomEdition.mexicanAdopt.promotion.GooglePlay;
+import com.atomEdition.mexicanAdopt.promotion.FollowActivity;
 
 public class MenuActivity extends Activity {
 

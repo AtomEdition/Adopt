@@ -1,4 +1,4 @@
-package com.atomEdition.mexicanAdopt;
+package com.atomEdition.mexicanAdopt.promotion;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+import com.atomEdition.mexicanAdopt.MenuActivity;
+import com.atomEdition.mexicanAdopt.R;
 
 /**
  * Created by FruityDevil on 07.08.2015.
