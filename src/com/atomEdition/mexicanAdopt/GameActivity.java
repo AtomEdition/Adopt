@@ -12,19 +12,16 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.atomEdition.mexicanAdopt.ad.FullScreenBanner;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+import com.atomEdition.mexicanAdopt.ad.AdService;
 
 import java.util.Random;
 
 public class GameActivity extends Activity {
 
-    private InterstitialAd interstitialAd;
-
     private static long back_pressed;
     private static CountDownTimer countDownTimer;
+  //  private InstanceFactory instanceFactory = InstanceFactory.getFactory();
+    private AdService adService = AdService.getInstance();
 
     private void initialization(){
         GameUtils.setActivity(this);
@@ -231,7 +228,7 @@ public class GameActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
-            setAd();
+            adService.loadInterstitial(this);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -255,11 +252,8 @@ public class GameActivity extends Activity {
         countDownTimer.cancel();
         Utils.LIVES_CURRENT = 0;
         setHighScore();
-        try {
-            displayInterstitial();
-        } catch (Exception e) {
-            quit();
-        }
+        quit();
+        adService.displayInterstitial();
     }
 
     private void quit(){
@@ -378,27 +372,5 @@ public class GameActivity extends Activity {
         textView.setText("Lives: " + Utils.LIVES_CURRENT);
         textView = (TextView)findViewById(R.id.textViewScore);
         textView.setText("Score: " + Utils.SCORE);
-    }
-
-    public void setAd(){
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-9550981282535152/2752998620");
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
-        interstitialAd.loadAd(adRequest);
-    }
-
-    public void displayInterstitial() {
-        if (interstitialAd.isLoaded()) {
-            interstitialAd.setAdListener(new AdListener() {
-                @Override
-                public void onAdClosed() {
-                    super.onAdClosed();
-                    quit();
-                }
-            });
-            interstitialAd.show();
-        } else
-            quit();
     }
 }

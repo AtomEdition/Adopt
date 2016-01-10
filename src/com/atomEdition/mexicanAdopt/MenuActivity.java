@@ -8,15 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.atomEdition.mexicanAdopt.ad.AdService;
 import com.atomEdition.mexicanAdopt.promotion.FollowActivity;
 
 public class MenuActivity extends Activity {
 
     private static long back_pressed;
+    private AdService adService = AdService.getInstance();
 
     private void initialization(){
         getHighScore();
         setButtonListeners();
+        adService.showBanner(this);
     }
 
     /**

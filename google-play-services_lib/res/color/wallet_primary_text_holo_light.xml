@@ -5,6 +5,5 @@
     <item android:state_window_focused="false" android:color="@color/wallet_bright_foreground_holo_light"/>
     <item android:state_pressed="true" android:color="@color/wallet_bright_foreground_holo_light"/>
     <item android:state_selected="true" android:color="@color/wallet_bright_foreground_holo_light"/>
-    <item android:color="@color/wallet_bright_foreground_holo_light"/>
-    <!-- not selected -->
+    <item android:color="@color/wallet_bright_foreground_holo_light"/> <!-- not selected -->
 </selector>
