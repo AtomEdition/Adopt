@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.atomEdition.mexicanAdopt.ad.AdService;
 import com.atomEdition.mexicanAdopt.promotion.FollowActivity;
+import com.atomEdition.mexicanAdopt.promotion.PromotionButtonController;
 
 public class MenuActivity extends Activity {
 
@@ -20,6 +21,7 @@ public class MenuActivity extends Activity {
         getHighScore();
         setButtonListeners();
         adService.showBanner(this);
+        PromotionButtonController.getInstance(this);
     }
 
     /**
@@ -62,6 +64,11 @@ public class MenuActivity extends Activity {
         Intent intent = new Intent(this, FollowActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void onPromotionClick(View view) {
+        PromotionButtonController promotionButtonController = PromotionButtonController.getInstance(this);
+        promotionButtonController.makeUsFamous();
     }
 
     private void setButtonListeners(){
