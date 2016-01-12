@@ -20,7 +20,6 @@ public class GameActivity extends Activity {
 
     private static long back_pressed;
     private static CountDownTimer countDownTimer;
-  //  private InstanceFactory instanceFactory = InstanceFactory.getFactory();
     private AdService adService = AdService.getInstance();
 
     private void initialization(){

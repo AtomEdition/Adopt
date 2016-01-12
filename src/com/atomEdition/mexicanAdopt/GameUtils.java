@@ -12,11 +12,10 @@ import android.widget.ImageView;
 public class GameUtils extends ContextWrapper{
 
     private static Activity activity;
-    private static int pittDelay;
+    private static int pittDelay = 1;
 
     public GameUtils(Context base) {
         super(base);
-        pittDelay = 1;
     }
 
     public static void setActivity(Activity inputActivity) {
@@ -25,10 +24,13 @@ public class GameUtils extends ContextWrapper{
 
     public void checkPitt(){
         ImageView imageView = (ImageView)activity.findViewById(R.id.imagePitt);
-        if (Utils.chanceChecker(Utils.CHANCE_PITT))
+        if (Utils.chanceChecker(Utils.CHANCE_PITT)) {
             imageView.setVisibility(View.VISIBLE);
-        else
+            pittDelay = 1;
+        }
+        else {
             imageView.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void hidePitt(){

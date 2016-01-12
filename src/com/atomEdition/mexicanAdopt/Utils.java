@@ -13,8 +13,8 @@ public abstract class Utils {
     public static Integer LIVES_CURRENT = 0, LIVES_MAXIMUM = 3;
 
     public static Integer DELAY_TOTAL = 6, DELAY_CURRENT = 0;
-    public static final Integer DELAY_INCREMENT_INTERVAL = 3;
-    public static final Integer DELAY_MINIMUM = 3; //MAXIMUM - DELAY_MINIMUM
+    public static final Integer DELAY_INCREMENT_INTERVAL = 5;
+    public static final Integer DELAY_MINIMUM = 5; //MAXIMUM - DELAY_MINIMUM
     public static Integer TIMER_DECREMENT_INTERVAL = 6;
     public static final Integer TIMER_INTERVAL_MINIMUM = 2;
 
@@ -46,7 +46,7 @@ public abstract class Utils {
     public static final int PITT_MARGIN_SIDE = 30;
     public static final int PITT_MARGIN_BOTTOM = 10;
 
-    public static final int CHANCE_PITT = 10;
+    public static final int CHANCE_PITT = 20;
 
     public static boolean chanceChecker(int chance){
         Random random = new Random();

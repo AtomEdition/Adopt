@@ -49,7 +49,7 @@
                 android:textColor="@android:color/black" android:text="@string/follow_text"/>
     </LinearLayout>
     <ImageButton android:layout_width="@dimen/promotion_button_size" android:layout_height="@dimen/promotion_button_size" android:id="@+id/promotion_button"
-                 android:onClick="onPromotionClick" android:background="@drawable/button_off"
+                 android:onClick="onPromotionClick" android:background="@drawable/promotion_cat_clicker"
                  android:layout_gravity="left|bottom" android:layout_marginLeft="@dimen/promotion_button_margin"
                  android:layout_marginBottom="@dimen/promotion_button_margin"
                  android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"/>
